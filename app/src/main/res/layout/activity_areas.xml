@@ -8,6 +8,7 @@
     tools:context=".Areas">
 
     <ListView
+        android:id="@+id/lstAreas"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

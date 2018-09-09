@@ -6,11 +6,25 @@
     <string name="areas">Areas</string>
     <string name="volumenes">Volumenes</string>
     <string name="operaciones_realizadas">Operaciones Realizadas</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="rectangulo">Rectangulo</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="mensaje_exitoso">Operacion Almacenada Exitosamente!!</string>
+    <string name="error1">Digite el valor a calcular</string>
+    <string name="error2">El valor a calcular no puede ser cero</string>
+
+
 
     <string-array name="opciones">
         <item>@string/areas</item>
         <item>@string/volumenes</item>
         <item>@string/operaciones_realizadas</item>
+    </string-array>
+
+    <string-array name="opciones_areas">
+        <item>@string/cuadrado</item>
+        <item>@string/rectangulo</item>
     </string-array>
 
 </resources>

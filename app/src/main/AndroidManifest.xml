@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".Areas" />
         <activity android:name=".Volumenes" />
-        <activity android:name=".OperacionesRealizadas"></activity>
+        <activity android:name=".OperacionesRealizadas" />
+        <activity android:name=".Cuadrado" />
+        <activity android:name=".Rectangulo"></activity>
     </application>
 
 </manifest>

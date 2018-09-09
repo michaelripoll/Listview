@@ -6,7 +6,7 @@ public class Datos {
 
     private static ArrayList <Operaciones> operaciones = new ArrayList<>();
 
-    public static void guardar(Operaciones o)
+    public static void calcular(Operaciones o)
     {
         operaciones.add(o);
     }
