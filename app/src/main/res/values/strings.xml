@@ -13,7 +13,12 @@
     <string name="mensaje_exitoso">Operacion Almacenada Exitosamente!!</string>
     <string name="error1">Digite el valor a calcular</string>
     <string name="error2">El valor a calcular no puede ser cero</string>
-
+    <string name="lado">Ingrese valor lado</string>
+    <string name="base">Ingrese valor base</string>
+    <string name="altura">Ingrese valor altura</string>
+    <string name="esfera">Esfera</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="radio">Ingrese valor radio</string>
 
 
     <string-array name="opciones">
@@ -25,6 +30,11 @@
     <string-array name="opciones_areas">
         <item>@string/cuadrado</item>
         <item>@string/rectangulo</item>
+    </string-array>
+
+    <string-array name="opciones_volumen">
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
     </string-array>
 
 </resources>

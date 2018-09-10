@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Rectangulo extends AppCompatActivity {
+public class Cilindro extends AppCompatActivity {
 
     private TextView resultado;
     private EditText dato1, dato2;
@@ -18,27 +18,27 @@ public class Rectangulo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangulo);
+        setContentView(R.layout.activity_cilindro);
 
-        dato1 = findViewById(R.id.txtBase);
-        dato2 = findViewById(R.id.txtAltura);
-        resultado = findViewById(R.id.lblResultadoRectangulo);
+        dato1 = findViewById(R.id.txtRadioCilindro);
+        dato2 = findViewById(R.id.txtAlturaCilindro);
+        resultado = findViewById(R.id.lblResultadoCilindro);
         resources = this.getResources();
     }
 
-    public void calcularRectangulo(View view){
+    public void calcularCilindro(View view){
         String op,dt1,dt2,res,dat;
-        double base,altura, result;
+        double rad,altura, result;
         if (validar()){
-            op = "Area del rectangulo";
-            base = Double.parseDouble(dato1.getText().toString());
+            op = "Volumen del cilindro";
+            rad = Double.parseDouble(dato1.getText().toString());
             altura = Double.parseDouble(dato2.getText().toString());
-            dt1 = "Valor de la base: " + base;
+            dt1 = "Valor del radio: " + rad;
             dt2 = "Valor de la altura: " + altura;
             dat = dt1 +"\n"+dt2;
-            result = (base*altura);
+            result = (Math.PI*(Math.pow(rad,2)*altura));
             res = Integer.toString((int) result);
-            resultado.setText("El area del Rectangulo es " + String.format( "%.1f", result ));
+            resultado.setText("El Volumen del Cilindro Es: " + String.format( "%.1f", result ));
             Operaciones o = new Operaciones(op,dat,res);
             o.calcular();
             Toast.makeText(this,resources.getString(R.string.mensaje_exitoso),Toast.LENGTH_SHORT).show();
@@ -71,7 +71,7 @@ public class Rectangulo extends AppCompatActivity {
         return true;
     }
 
-    public void limpiarRectangulo(View v){
+    public void limpiarCilindro(View v){
         borrar2();
     }
 
@@ -81,4 +81,5 @@ public class Rectangulo extends AppCompatActivity {
         dato2.setText("");
         dato1.requestFocus();
     }
+
 }

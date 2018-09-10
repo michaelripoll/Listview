@@ -8,38 +8,37 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Cuadrado extends AppCompatActivity {
+public class Esfera extends AppCompatActivity {
 
-    private EditText dato;
     private TextView resultado;
+    private EditText dato;
     private String operaciones [];
     private Resources resources;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuadrado);
+        setContentView(R.layout.activity_esfera);
 
-        dato = findViewById(R.id.txtCuadrado);
-        resultado = findViewById(R.id.lblResultadoCuadrado);
+        dato = findViewById(R.id.txtEsfera);
+        resultado = findViewById(R.id.lblResultadoEsfera);
         resources = this.getResources();
-
     }
 
-    public void calcular(View V){
+    public void calcularEsfera(View view){
         String dat,res,op;
-
-        if (validar())
-        {
-            op = "Area del cuadrado";
-            double lado = Double.parseDouble(dato.getText().toString());
-            dat = "Valor del lado : " + dato.getText().toString();
-            double result = lado * lado;
+        double rad, result;
+        if (validar()){
+            op = "Volumen de la esfera";
+            rad = Double.parseDouble(dato.getText().toString());
+            dat = "Valor del radio : " + rad;
+            result = (Math.PI*(4)*(Math.pow(rad,3)));
+            result = (result/3);
             res = Integer.toString((int) result);
-            resultado.setText("El area del cuadrado es " + String.format("%.1f", result));
-            Operaciones o = new Operaciones(op, dat, res);
+            resultado.setText("El Volumen de la Esfera Es: " + String.format( "%.1f", result ));
+            Operaciones o = new Operaciones(op,dat,res);
             o.calcular();
-            Toast.makeText(this, resources.getString(R.string.mensaje_exitoso), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,resources.getString(R.string.mensaje_exitoso),Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -69,5 +68,4 @@ public class Cuadrado extends AppCompatActivity {
         dato.setText("");
         dato.requestFocus();
     }
-
 }

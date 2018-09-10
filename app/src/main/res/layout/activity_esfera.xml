@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Cuadrado">
+    tools:context=".Esfera">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cuadrado"
+        android:text="@string/esfera"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/txtCuadrado"
+        android:id="@+id/txtEsfera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/lado"
+        android:hint="@string/radio"
         android:inputType="number|numberDecimal" />
 
     <LinearLayout
@@ -30,27 +30,29 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCalcularCuadrado"
+            android:id="@+id/btnCalcularEsfera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="calcular"
+            android:onClick="calcularEsfera"
             android:text="@string/calcular"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnLimpiarCuadrado"
+            android:id="@+id/btnLimpiarEsfera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="limpiar"
             android:text="@string/limpiar"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <TextView
-        android:id="@+id/lblResultadoCuadrado"
+        android:id="@+id/lblResultadoEsfera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp" />
+
 </LinearLayout>

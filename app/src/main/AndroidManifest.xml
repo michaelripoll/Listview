@@ -20,7 +20,9 @@
         <activity android:name=".Volumenes" />
         <activity android:name=".OperacionesRealizadas" />
         <activity android:name=".Cuadrado" />
-        <activity android:name=".Rectangulo"></activity>
+        <activity android:name=".Rectangulo" />
+        <activity android:name=".Esfera" />
+        <activity android:name=".Cilindro"></activity>
     </application>
 
 </manifest>
