@@ -1,24 +1,44 @@
 <resources>
     <string name="app_name">ListView</string>
     <string name="operacion">Operación</string>
-    <string name="datos">Datos</string>
-    <string name="resultado">Resultado</string>
-    <string name="areas">Areas</string>
-    <string name="volumenes">Volumenes</string>
     <string name="operaciones_realizadas">Operaciones Realizadas</string>
+    <string name="opciones">Opciones</string>
+
+    <string name="areas">Areas</string>
+    <string name="volumenes">Volúmenes</string>
     <string name="cuadrado">Cuadrado</string>
     <string name="rectangulo">Rectangulo</string>
+    <string name="esfera">Esfera</string>
+    <string name="cilindro">Cilindro</string>
+
+    <string name="datos">Datos</string>
     <string name="calcular">Calcular</string>
     <string name="limpiar">Limpiar</string>
-    <string name="mensaje_exitoso">Operacion Almacenada Exitosamente!!</string>
-    <string name="error1">Digite el valor a calcular</string>
-    <string name="error2">El valor a calcular no puede ser cero</string>
+    <string name="resultado">Resultado</string>
+
     <string name="lado">Ingrese valor lado</string>
     <string name="base">Ingrese valor base</string>
     <string name="altura">Ingrese valor altura</string>
-    <string name="esfera">Esfera</string>
-    <string name="cilindro">Cilindro</string>
     <string name="radio">Ingrese valor radio</string>
+
+    <string name="error1">Ingrese valor a calcular</string>
+    <string name="error2">El valor a calcular no puede ser cero</string>
+
+    <string name="mensaje_exitoso">Operacion Almacenada Exitosamente!!</string>
+    <string name="mensaje_area_cuadrado">Area del cuadrado</string>
+    <string name="mensaje_valor_lado">Valor del lado :</string>
+    <string name="mensaje_resultado_c">El area del cuadrado es :</string>
+    <string name="mensaje_area_rectangulo">Area del rectangulo</string>
+    <string name="mensaje_valor_base">Valor de la base :</string>
+    <string name="mensaje_valor_altura">Valor de la altura :</string>
+    <string name="mensaje_resultado_r">El area del rectangulo es :</string>
+    <string name="mensaje_volumen_esfera">Volumen de la esfera</string>
+    <string name="mensaje_valor_radio">Valor del radio :</string>
+    <string name="mensaje_resultado_radio">El volumen de la esfera es :</string>
+    <string name="mensaje_volumen_cilindro">Volumen del cilindro</string>
+    <string name="mensaje_valor_radio_cilindro">Valor del radio :</string>
+    <string name="mensaje_valor_altura_cilindro">Valor de la altura :</string>
+    <string name="mensaje_resultado_cilindro">El volumen del cilindro es :</string>
 
 
     <string-array name="opciones">

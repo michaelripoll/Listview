@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".Volumenes">
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/volumenes"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <ListView
         android:id="@+id/lstVolumen"
         android:layout_width="match_parent"

@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Esfera extends AppCompatActivity {
+public class Esfera extends AppCompatActivity
+{
 
     private TextView resultado;
     private EditText dato;
@@ -16,7 +17,8 @@ public class Esfera extends AppCompatActivity {
     private Resources resources;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esfera);
 
@@ -25,17 +27,19 @@ public class Esfera extends AppCompatActivity {
         resources = this.getResources();
     }
 
-    public void calcularEsfera(View view){
+    public void calcularEsfera(View view)
+    {
         String dat,res,op;
         double rad, result;
-        if (validar()){
-            op = "Volumen de la esfera";
+        if (validar())
+        {
+            op = "" + resources.getString(R.string.mensaje_volumen_esfera);
             rad = Double.parseDouble(dato.getText().toString());
-            dat = "Valor del radio : " + rad;
+            dat = "" + resources.getString(R.string.mensaje_valor_radio) + rad;
             result = (Math.PI*(4)*(Math.pow(rad,3)));
             result = (result/3);
             res = Integer.toString((int) result);
-            resultado.setText("El Volumen de la Esfera Es: " + String.format( "%.1f", result ));
+            resultado.setText("" + resources.getString(R.string.mensaje_resultado_radio) + String.format( "%.1f", result ));
             Operaciones o = new Operaciones(op,dat,res);
             o.calcular();
             Toast.makeText(this,resources.getString(R.string.mensaje_exitoso),Toast.LENGTH_SHORT).show();
@@ -43,14 +47,17 @@ public class Esfera extends AppCompatActivity {
         }
     }
 
-    public boolean validar(){
-        if(dato.getText().toString().isEmpty()){
+    public boolean validar()
+    {
+        if(dato.getText().toString().isEmpty())
+        {
             dato.setError(this.getResources().getString(R.string.error1));
             dato.requestFocus();
             return false;
 
         }
-        if(Double.parseDouble( dato.getText().toString())==0){
+        if(Double.parseDouble( dato.getText().toString())==0)
+        {
             dato.requestFocus();
             dato.setError(this.getResources().getString(R.string.error2));
             return false;
@@ -59,11 +66,13 @@ public class Esfera extends AppCompatActivity {
         return true;
     }
 
-    public void limpiar(View v){
+    public void limpiar(View v)
+    {
         borrar();
     }
 
-    public void borrar(){
+    public void borrar()
+    {
         resultado.setText("");
         dato.setText("");
         dato.requestFocus();

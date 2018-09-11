@@ -8,7 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Principal extends AppCompatActivity {
+public class Principal extends AppCompatActivity
+{
 
     private ListView lv;
     private String [] opc;
@@ -16,7 +17,8 @@ public class Principal extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
@@ -31,7 +33,8 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                switch (i){
+                switch (i)
+                {
                     case 0:
                         in = new Intent(Principal.this, Areas.class);
                         startActivity(in);

@@ -42,7 +42,8 @@ public class Operaciones
         this.resultado = resultado;
     }
 
-    public void calcular() {
+    public void calcular()
+    {
         Datos.calcular(this);
     }
 }

@@ -2,7 +2,8 @@ package co.edu.mripoll3cuc.listview;
 
 import java.util.ArrayList;
 
-public class Datos {
+public class Datos
+{
 
     private static ArrayList <Operaciones> operaciones = new ArrayList<>();
 

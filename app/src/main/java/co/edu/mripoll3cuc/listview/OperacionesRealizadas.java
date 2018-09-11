@@ -8,20 +8,23 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class OperacionesRealizadas extends AppCompatActivity {
+public class OperacionesRealizadas extends AppCompatActivity
+{
 
     private TableLayout tabla;
     private ArrayList<Operaciones> operaciones;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operaciones_realizadas);
 
         tabla = findViewById(R.id.tabla);
         operaciones = Datos.obtener();
 
-        for (int i = 0; i <operaciones.size() ; i++) {
+        for (int i = 0; i <operaciones.size() ; i++)
+        {
             TableRow fila = new TableRow(this);
             TextView c1 = new TextView(this);
             TextView c2 = new TextView(this);

@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Cilindro extends AppCompatActivity {
+public class Cilindro extends AppCompatActivity
+{
 
     private TextView resultado;
     private EditText dato1, dato2;
@@ -16,7 +17,8 @@ public class Cilindro extends AppCompatActivity {
     private Resources resources;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cilindro);
 
@@ -26,19 +28,21 @@ public class Cilindro extends AppCompatActivity {
         resources = this.getResources();
     }
 
-    public void calcularCilindro(View view){
+    public void calcularCilindro(View view)
+    {
         String op,dt1,dt2,res,dat;
         double rad,altura, result;
-        if (validar()){
-            op = "Volumen del cilindro";
+        if (validar())
+        {
+            op = "" + resources.getString(R.string.mensaje_volumen_cilindro);
             rad = Double.parseDouble(dato1.getText().toString());
             altura = Double.parseDouble(dato2.getText().toString());
-            dt1 = "Valor del radio: " + rad;
-            dt2 = "Valor de la altura: " + altura;
+            dt1 = "" + resources.getString(R.string.mensaje_valor_radio_cilindro) + rad;
+            dt2 = "" + resources.getString(R.string.mensaje_valor_altura_cilindro)+ altura;
             dat = dt1 +"\n"+dt2;
             result = (Math.PI*(Math.pow(rad,2)*altura));
             res = Integer.toString((int) result);
-            resultado.setText("El Volumen del Cilindro Es: " + String.format( "%.1f", result ));
+            resultado.setText("" + resources.getString(R.string.mensaje_resultado_cilindro) + String.format( "%.1f", result ));
             Operaciones o = new Operaciones(op,dat,res);
             o.calcular();
             Toast.makeText(this,resources.getString(R.string.mensaje_exitoso),Toast.LENGTH_SHORT).show();
@@ -46,24 +50,29 @@ public class Cilindro extends AppCompatActivity {
         }
     }
 
-    public boolean validar(){
-        if(dato1.getText().toString().isEmpty()){
+    public boolean validar()
+    {
+        if(dato1.getText().toString().isEmpty())
+        {
             dato1.setError(this.getResources().getString(R.string.error1));
             dato1.requestFocus();
             return false;
         }
-        if(Double.parseDouble( dato1.getText().toString())==0){
+        if(Double.parseDouble( dato1.getText().toString())==0)
+        {
             dato1.requestFocus();
             dato1.setError(this.getResources().getString(R.string.error2));
             return false;
         }
 
-        if(dato2.getText().toString().isEmpty()){
+        if(dato2.getText().toString().isEmpty())
+        {
             dato2.setError(this.getResources().getString(R.string.error1));
             dato2.requestFocus();
             return false;
         }
-        if(Double.parseDouble( dato2.getText().toString())==0) {
+        if(Double.parseDouble( dato2.getText().toString())==0)
+        {
             dato2.requestFocus();
             dato2.setError(this.getResources().getString(R.string.error2));
             return false;
@@ -71,11 +80,13 @@ public class Cilindro extends AppCompatActivity {
         return true;
     }
 
-    public void limpiarCilindro(View v){
+    public void limpiarCilindro(View v)
+    {
         borrar2();
     }
 
-    public void borrar2(){
+    public void borrar2()
+    {
         resultado.setText("");
         dato1.setText("");
         dato2.setText("");

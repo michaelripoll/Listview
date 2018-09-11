@@ -9,7 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Areas extends AppCompatActivity {
+public class Areas extends AppCompatActivity
+{
 
     private ListView lv;
     private Resources resources;
@@ -17,7 +18,8 @@ public class Areas extends AppCompatActivity {
     private Intent in;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_areas);
 
@@ -30,7 +32,8 @@ public class Areas extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i) {
+                switch (i)
+                {
                     case 0:
                         in = new Intent(Areas.this, Cuadrado.class);
                         startActivity(in);

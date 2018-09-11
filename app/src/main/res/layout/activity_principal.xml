@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".Principal">
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opciones"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <ListView
         android:id="@+id/lstOpciones"
         android:layout_width="match_parent"

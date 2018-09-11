@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Cuadrado extends AppCompatActivity {
+public class Cuadrado extends AppCompatActivity
+{
 
     private EditText dato;
     private TextView resultado;
@@ -16,7 +17,8 @@ public class Cuadrado extends AppCompatActivity {
     private Resources resources;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuadrado);
 
@@ -26,17 +28,18 @@ public class Cuadrado extends AppCompatActivity {
 
     }
 
-    public void calcular(View V){
+    public void calcular(View V)
+    {
         String dat,res,op;
 
         if (validar())
         {
-            op = "Area del cuadrado";
+            op = "" + resources.getString(R.string.mensaje_area_cuadrado);
             double lado = Double.parseDouble(dato.getText().toString());
-            dat = "Valor del lado : " + dato.getText().toString();
+            dat = "" + resources.getString(R.string.mensaje_valor_lado) + dato.getText().toString();
             double result = lado * lado;
             res = Integer.toString((int) result);
-            resultado.setText("El area del cuadrado es " + String.format("%.1f", result));
+            resultado.setText("" + resources.getString(R.string.mensaje_resultado_c) + String.format("%.1f", result));
             Operaciones o = new Operaciones(op, dat, res);
             o.calcular();
             Toast.makeText(this, resources.getString(R.string.mensaje_exitoso), Toast.LENGTH_SHORT).show();
@@ -44,14 +47,17 @@ public class Cuadrado extends AppCompatActivity {
         }
     }
 
-    public boolean validar(){
-        if(dato.getText().toString().isEmpty()){
+    public boolean validar()
+    {
+        if(dato.getText().toString().isEmpty())
+        {
             dato.setError(this.getResources().getString(R.string.error1));
             dato.requestFocus();
             return false;
 
         }
-        if(Double.parseDouble( dato.getText().toString())==0){
+        if(Double.parseDouble( dato.getText().toString())==0)
+        {
             dato.requestFocus();
             dato.setError(this.getResources().getString(R.string.error2));
             return false;
@@ -60,11 +66,13 @@ public class Cuadrado extends AppCompatActivity {
         return true;
     }
 
-    public void limpiar(View v){
+    public void limpiar(View v)
+    {
         borrar();
     }
 
-    public void borrar(){
+    public void borrar()
+    {
         resultado.setText("");
         dato.setText("");
         dato.requestFocus();
